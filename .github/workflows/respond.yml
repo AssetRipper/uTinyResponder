@@ -12,7 +12,7 @@ jobs:
       - name: Read file content and set as output
         id: read_file
         run: |
-          content=$(< ./path/to/your/file.txt)
+          content=$(< ./Response.md)
           echo "content<<EOF" >> $GITHUB_OUTPUT
           echo "$content" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
