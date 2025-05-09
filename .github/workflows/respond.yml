@@ -2,6 +2,21 @@ name: Respond
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * 1" # Monday
+    - cron: "0 16 * * 4" # Thursday
+
+# The schedule event can be delayed during periods of high loads of GitHub Actions workflow runs
+#
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+# │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+# │ │ │ │ │
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *
 
 jobs:
   respond:
