@@ -59,12 +59,12 @@ jobs:
 
                 if (!userHasCommented) {
                   console.log(`User hasn't commented on issue #${issue.number}, posting comment...`);
-                  //await github.rest.issues.createComment({
-                  //  owner,
-                  //  repo,
-                  //  issue_number: issue.number,
-                  //  body: 'Automated message because you haven't commented yet!',
-                  //});
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    body: content,
+                  });
                 } else {
                   console.log(`User has already commented on issue #${issue.number}`);
                 }
