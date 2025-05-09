@@ -1,0 +1,24 @@
+name: Respond
+
+on:
+  workflow_dispatch:
+
+jobs:
+  respond:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read file content and set as output
+        id: read_file
+        run: |
+          content=$(< ./path/to/your/file.txt)
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$content" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      - name: Use file content in github-script
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const content = `${{ steps.read_file.outputs.content }}`;
+            console.log("Loaded content:", content);
