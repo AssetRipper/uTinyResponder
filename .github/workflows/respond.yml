@@ -34,14 +34,14 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Print loaded response
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const content = `${{ steps.read_file.outputs.content }}`;
             console.log(content);
 
       - name: Load issues and comment if necessary
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.PAT_TOKEN }}
           script: |
