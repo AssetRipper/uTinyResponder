@@ -37,7 +37,8 @@ This is a list of notable improvements planned for the future.
 If you like the work I've done and want to see it continue, please consider sponsoring me.
 
 * [GitHub Sponsors](https://github.com/sponsors/ds5678)
-* [Patreon](https://patreon.com/ds5678)
 * [Paypal](https://paypal.me/ds5678)
+* [Buy Me a Coffee](https://buymeacoffee.com/assetripper)
+* [Ko-fi](https://ko-fi.com/assetripper)
 
 A [Patreon](https://patreon.com/ds5678) subscription gives access to AssetRipper Premium, which has [additional features](https://assetripper.github.io/AssetRipper/articles/PremiumFeatures.html).
